@@ -1,0 +1,5 @@
+boto3==1.28.4
+confluent_kafka==2.2.0
+kafka_python==2.0.2
+pandas==1.5.3
+Requests==2.31.0

@@ -1,0 +1,21 @@
+organization:
+  name: Leonardo Sanches
+database:
+  host: postgresql
+  port: 5432
+  name: conduktor-platform
+  username: conduktor
+  password: change_me
+  ssl: false
+clusters:
+- id: local
+  name: local
+  bootstrapservers: redpanda-0:9092
+  labels: {}
+  ignoreuntrustedcertificate: false
+  schemaregistry:
+    url: http://redpanda-0:18081
+    ignoreuntrustedcertificate: false
+admin:
+  email: ${{ secrets.email_conduktor }}
+  password: ${{ secrets.password_conduktor }}
