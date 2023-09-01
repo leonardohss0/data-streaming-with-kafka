@@ -4,6 +4,8 @@ The Kafka Data Streaming Project is a demonstration of using Apache Kafka for re
 
 Keywords: Python, Data Processing, Kafka, Data Streaming, Docker
 
+![Kafka Flow](app_flow/assets/kafka-flow.jpg)
+
 ## Configuration
 ### Setting up the Kafka Cluster with Conduktor and Docker
 

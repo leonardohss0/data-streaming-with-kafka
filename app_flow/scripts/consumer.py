@@ -70,7 +70,7 @@ def run():
             new_df = pd.DataFrame(df[0].tolist())
 
             current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S.%f")
-            pushToLake(new_df, "wiki_" + current_datetime)
+            # pushToLake(new_df, "wiki_" + current_datetime)
 
     except KeyboardInterrupt:
         pass
