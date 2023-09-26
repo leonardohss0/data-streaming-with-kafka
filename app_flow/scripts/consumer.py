@@ -16,7 +16,7 @@ KAFKA_TOPIC = "my-topic"
 
 
 def pushToLake(df_data, name):
-    bucket = "kafka-bench-de"  # already created on S3
+    bucket = "kafka-tutorial-poatek"  # already created on S3
     csv_buffer = StringIO()
     df_data.to_csv(csv_buffer, encoding="utf8", index=False)
     schema = "wiki/"
@@ -70,7 +70,11 @@ def run():
             new_df = pd.DataFrame(df[0].tolist())
 
             current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S.%f")
-            # pushToLake(new_df, "wiki_" + current_datetime)
+
+            try:
+                pushToLake(new_df, "wiki_" + current_datetime)
+            except Exception as e:
+                print(e)
 
     except KeyboardInterrupt:
         pass

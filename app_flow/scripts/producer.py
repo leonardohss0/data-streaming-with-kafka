@@ -11,11 +11,13 @@ class Kafka(object):
         p = Producer(producer_settings_json(broker))
 
         get_data = object_name
+        key = "wikipedia"  # Set your desired key
 
         try:
             p.poll(0)
             p.produce(
                 topic=kafka_topic,
+                key=key.encode("utf-8"),  # Encode the key as bytes
                 value=json.dumps(get_data).encode("utf-8"),
                 callback=on_delivery_json,
             )

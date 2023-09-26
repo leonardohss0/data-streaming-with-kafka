@@ -1,8 +1,8 @@
 from kafka import KafkaConsumer
 
 KAFKA_BROKER = "localhost:19092"
-KAFKA_TOPIC = "demo-topic"
-CONSUMER_GROUP_ID = "demo-consumer-group"
+KAFKA_TOPIC = "second-example-topic"
+CONSUMER_GROUP_ID = "second-example-consumer-group"
 
 consumer = KafkaConsumer(
     KAFKA_TOPIC,
